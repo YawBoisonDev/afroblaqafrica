@@ -21,7 +21,7 @@
 </script>
 
 
-<div id="documentary_card" class="grid grid-cols-1 gap-4 mx-5 my-auto">
+<div id="documentary_card" class="grid grid-cols-1 gap-4 mx-auto my-5 md:grid-cols-2 w-150 ">
     {#each documentary_links as docu_link}
         <iframe
             width="450"

@@ -1,0 +1,1 @@
+<h6 class="text-6xl my-70 mx-auto text-center">Market currently under construction</h6>
