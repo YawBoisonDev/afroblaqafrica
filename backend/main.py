@@ -1,9 +1,10 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-
 from pydantic import BaseModel, EmailStr
 
-
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 from motor.motor_asyncio import AsyncIOMotorClient
 
@@ -18,11 +19,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-
-
 #MongoDB setup
-uri = "mongodb+srv://yawboison:mongodb.Boison96@cluster0.grh76gy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+uri = os.getenv("Mongodb_conn")
+
 # Create a new client and connect to the server
 client = AsyncIOMotorClient(uri)
 db = client["Contact_details"]
